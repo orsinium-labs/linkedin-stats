@@ -9,6 +9,40 @@ import dateutil.parser
 from emoji import EMOJI_DATA
 
 
+COMPANIES = {
+    'Biller',
+    'Sentinels',
+    'Bitpanda',
+    'Form3',
+    'Pollen',
+    'Sendcloud',
+    'Smart.pr',
+    'DCVTechnologies',
+    'TCS',  # Tata Consultancy Services
+    'planet.com',  # Planet
+    'NetData',
+    'viafintech',
+    'Smiler',
+    'Mollie',
+    '@fb.com',  # Meta
+    'Lightspeed',
+    'BOTS',
+    'Tessian',
+    'Seamly',
+    'IndyKite',
+    'PostNL',
+    'InDebted',
+    'HelloFresh',
+    'vpTech',
+    'Flexport',
+    'M2A Media',
+    'HCL Technologies',
+    'Crowdstrike',
+    'Makersite',
+    'GeekSoft Consulting',
+}
+
+
 @dataclass
 class Message:
     raw: str
@@ -80,7 +114,7 @@ class Message:
 
     @cached_property
     def salary(self) -> tuple[str, str]:
-        rex = re.compile(r'€?(\d{2,3})[kK]')
+        rex = re.compile(r'[€£]?(\d{2,3})(k|K|\,000)')
         matches = []
         for match in rex.finditer(self.raw):
             matches.append(match.group(1))
@@ -105,6 +139,13 @@ class Message:
     @cached_property
     def has_url(self) -> bool:
         return 'https://' in self.raw
+
+    @cached_property
+    def company(self) -> str:
+        for company in COMPANIES:
+            if company in self.raw:
+                return company
+        return ''
 
     @cached_property
     def python(self) -> bool:
@@ -133,7 +174,9 @@ class Message:
             has_emoji=self.has_emoji,
             has_email=self.has_email,
             has_url=self.has_url,
+            company=self.company,
             python=self.python,
+            chars=len(self.raw),
             date=self.date.strftime('%Y-%m-%d'),
             time=self.time.strftime('%H:%I'),
         )
