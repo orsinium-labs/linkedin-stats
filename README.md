@@ -17,6 +17,7 @@ Has word "Python"             : 62/87 (71%)
 Send on weekend               : 01/87 (01%)
 Send during working hours     : 74/87 (85%)
 Duplicate messages            : 10/87 (11%)
+Duplicate companies           : 07/87 (08%)
 Average message size          : 1195 chars
 ```
 
@@ -34,3 +35,4 @@ Explanation for fields:
 + "Has word 'Python'". I'm a Python engineer, and so I expect all vacancies I receive to be relevant to it. Often, I receive vacancies for PHP, Java, or whatever else.
 + "Send during working hours". Anywhere between 8:00 and 18:00.
 + "Duplicate messages". Number of messages from people who contacted me before. It might be a different position but the same sender.
++ "Duplicate companies". How many times I was contacted about a position in the company I was contacted about before.

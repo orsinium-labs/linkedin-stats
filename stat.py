@@ -41,9 +41,12 @@ times = [dateutil.parser.parse(m['time']).time() for m in messages]
 workhours = sum(8 <= t.hour <= 17 for t in times)
 show_percent('Send during working hours', workhours)
 
-times = [dateutil.parser.parse(m['time']).time() for m in messages]
 repeated = len(messages) - len({m['sender_name'] for m in messages})
 show_percent('Duplicate messages', repeated)
+
+companies = [m['company'] for m in messages if m['company']]
+repeated = len(companies) - len(set(companies))
+show_percent('Duplicate companies', repeated)
 
 avg_size = sum(m['chars'] for m in messages) / len(messages)
 title = 'Average message size'
