@@ -103,6 +103,10 @@ class Message:
         return rex.search(self.raw) is not None
 
     @cached_property
+    def has_url(self) -> bool:
+        return 'https://' in self.raw
+
+    @cached_property
     def python(self) -> bool:
         return 'python' in self.raw.lower()
 
@@ -128,6 +132,7 @@ class Message:
             salary_high=self.salary[1],
             has_emoji=self.has_emoji,
             has_email=self.has_email,
+            has_url=self.has_url,
             python=self.python,
             date=self.date.strftime('%Y-%m-%d'),
             time=self.time.strftime('%H:%I'),
