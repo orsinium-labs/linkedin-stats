@@ -12,7 +12,9 @@ messages = [json.loads(line) for line in sys.stdin]
 def format_percent(n: int) -> str:
     total = len(messages)
     percent = round(n / total * 100)
-    return f'{n:02}/{total} ({percent:02}%)'
+    block = '█' * round(percent / 20)
+    block += '░' * (5 - len(block))
+    return f'{n:02}/{total} ({percent:02}%)  {block}'
 
 
 def show_percent(title: str, field: str | int):
