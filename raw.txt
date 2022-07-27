@@ -1572,7 +1572,7 @@ Chris Dixon sent the following message at 3:41 PM
 View Chris’ profileChris Dixon
 Chris Dixon  3:41 PM
 📸 Come and join Smiler and build THE “Uber” for Photography! 📸
-Hey Nikita ' OR 1 -- .,   
+Hey Nikita ' OR 1 -- .,
 
 Yep, another in mail from a recruiter on Linkedin! 😅
 
@@ -1580,16 +1580,16 @@ I am reaching out as based on your skills with Python and with your experience a
 
 🏝 Have you ever been on holiday and asked someone to take a photo on your phone and felt disappointed by the result? Me too.
 
-  📸 Smiler have created the world’s first on the spot photography marketplace, where you can find a local professional photographer, have a photoshoot, and only pay for the photos you like!
+📸 Smiler have created the world’s first on the spot photography marketplace, where you can find a local professional photographer, have a photoshoot, and only pay for the photos you like!
 
- To date they have:
+To date they have:
 - Fulfilled 20,000 photoshoots in the last 30 days!
 - 6000+ registered professional photographers around the world!
 - Received seed funding of €7.5 million!
 
 👨🏽‍💻 They are looking for more Senior Python Engineers to scale their solution and take it to the next level!
 
-💻 Tech Stack: Python, Django, REST, React, AWS, Docker, Redis. See more here: https://stackshare.io/smiler/smiler 
+💻 Tech Stack: Python, Django, REST, React, AWS, Docker, Redis. See more here: https://stackshare.io/smiler/smiler
 
 In return you will get:
 🗺 Location: Fully remote in Europe
@@ -2498,7 +2498,7 @@ Currently, I am in contact with a couple of fast-growing international and natio
 
 If you are not interested in changing jobs at this moment, it might be nice to connect for future possibilities?
 
- Kind regards,
+Kind regards,
 
 Ravian Wiebenga
 06-18939484
@@ -2689,7 +2689,7 @@ Thanks for connecting, I hope all is well.
 
 I wanted to connect with yourself to simply discuss a number of extremely interesting opportunities we currently have open within the European, Golang space.
 
-The majority of the opportunities we have are UK based but available to work fully remote across a large number of European countries. The salaries range between £70,000 - £150,000 for the right people with additional benefits and bonuses often on offer too. 
+The majority of the opportunities we have are UK based but available to work fully remote across a large number of European countries. The salaries range between £70,000 - £150,000 for the right people with additional benefits and bonuses often on offer too.
 
 Our clients are essentially looking for seasoned Go professionals to rocket propel their visions into reality and uniquely join talent dense environments of other Senior Go(lang) Professionals to build exceptional back-end platforms.
 
@@ -2697,7 +2697,7 @@ Its conversations with people like myself that help to keep an eye on the market
 
 Nothing ventured, nothing gained...
 
-Please respond with your CV and we can arrange an initial call ASAP. 
+Please respond with your CV and we can arrange an initial call ASAP.
 
 Best,
 Lewis.
