@@ -1,10 +1,12 @@
 from __future__ import annotations
-from dataclasses import dataclass
+
 import datetime
-from functools import cached_property
 import json
-from pathlib import Path
 import re
+from dataclasses import dataclass
+from functools import cached_property
+from pathlib import Path
+
 import dateutil.parser
 from emoji import EMOJI_DATA
 
@@ -138,7 +140,7 @@ class Message:
 
     @cached_property
     def has_url(self) -> bool:
-        return 'https://' in self.raw
+        return 'https://' in self.raw or 'www.' in self.raw
 
     @cached_property
     def company(self) -> str:

@@ -1,9 +1,10 @@
 from __future__ import annotations
+
 import json
 import sys
 from typing import Any
-import dateutil.parser
 
+import dateutil.parser
 
 messages: list[dict[str, Any]]
 messages = [json.loads(line) for line in sys.stdin]
@@ -14,7 +15,7 @@ def format_percent(n: int) -> str:
     percent = round(n / total * 100)
     block = '█' * round(percent / 20)
     block += '░' * (5 - len(block))
-    return f'{n:02}/{total} ({percent:02}%)  {block}'
+    return f'{n:03}/{total} ({percent:02}%)  {block}'
 
 
 def show_percent(title: str, field: str | int):

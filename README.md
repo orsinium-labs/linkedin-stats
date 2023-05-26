@@ -24,7 +24,7 @@ Average message size          : 1205 chars
 To reproduce:
 
 ```python
-python3.9 parser.py | python3.9 stat.py
+python3 parser.py | python3 stats.py
 ```
 
 Explanation for fields:
