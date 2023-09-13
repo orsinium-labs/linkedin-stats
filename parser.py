@@ -39,6 +39,7 @@ COMPANIES = {
     'Mollie',
     'Nebius',
     'NetData',
+    'Orbis',
     'planet.com',  # Planet
     'Pollen',
     'PostNL',
@@ -81,7 +82,7 @@ class Message:
 
     @cached_property
     def _name_time(self) -> tuple[str, str]:
-        rex = re.compile(r'(.+)  (\d{1,2}:\d{1,2} [AP]M)')
+        rex = re.compile(r'(.+)  ?(\d{1,2}:\d{1,2} [AP]M)')
         for line in self.raw.splitlines():
             match = rex.fullmatch(line)
             if match is None:
@@ -96,6 +97,7 @@ class Message:
         name = self._name_time[0]
         name = name.split('(')[0]  # remove pronouns
         name = name.strip()
+        name = name.removesuffix(' sent the following messages at')
         assert name
         assert name[0] == name[0].capitalize()
         return name
@@ -166,7 +168,7 @@ class Message:
 
     @cached_property
     def date(self) -> datetime.date:
-        rex = re.compile(r'[A-Z]{3} \d{1,2}(, \d{4})?')
+        rex = re.compile(r'\n[A-Z]{1}[A-Za-z]{2} \d{1,2}(, \d{4})?')
         match = rex.search(self.raw)
         assert match, self.sender_name
         return dateutil.parser.parse(match.group(0)).date()
